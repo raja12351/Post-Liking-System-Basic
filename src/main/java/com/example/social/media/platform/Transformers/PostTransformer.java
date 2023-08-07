@@ -1,7 +1,7 @@
-package Transformers;
+package com.example.social.media.platform.Transformers;
 
-import Dtos.RequestDtos.PostDto;
-import Models.Post;
+import com.example.social.media.platform.Dtos.RequestDtos.PostDto;
+import com.example.social.media.platform.Models.Post;
 
 public class PostTransformer {
 

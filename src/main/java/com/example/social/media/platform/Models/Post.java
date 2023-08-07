@@ -1,4 +1,4 @@
-package Models;
+package com.example.social.media.platform.Models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -22,6 +22,7 @@ public class Post {
     private Integer postNo;
 
     private List<String> contentList;
+
     private LocalTime contentTime;
 
     private int Likes;
@@ -30,6 +31,4 @@ public class Post {
     @ManyToOne
     private User user;
 
-    @OneToOne(mappedBy = "post", cascade = CascadeType.ALL)
-    private List<Notifications> notifications;
 }

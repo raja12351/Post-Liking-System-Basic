@@ -1,9 +1,9 @@
-package Service;
+package com.example.social.media.platform.Service;
 
-import Dtos.RequestDtos.UserDto;
-import Models.User;
-import Repository.UserRepository;
-import Transformers.UserTransformer;
+import com.example.social.media.platform.Dtos.RequestDtos.UserDto;
+import com.example.social.media.platform.Models.User;
+import com.example.social.media.platform.Repository.UserRepository;
+import com.example.social.media.platform.Transformers.UserTransformer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,8 +26,8 @@ public class UserService {
 
          int max = 0;
          for(User user1 : user){
-             if(user1.getNotificationsList().size()>max){
-                 max = user1.getNotificationsList().size();
+             if(user1.getNotifications().size()>max){
+                 max = user1.getNotifications().size();
              }
          }
          return max;

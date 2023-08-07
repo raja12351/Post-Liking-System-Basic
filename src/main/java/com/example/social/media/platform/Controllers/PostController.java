@@ -1,8 +1,8 @@
-package Controllers;
+package com.example.social.media.platform.Controllers;
 
-import Dtos.RequestDtos.PostDto;
-import Models.Notifications;
-import Service.PostService;
+import com.example.social.media.platform.Dtos.RequestDtos.PostDto;
+import com.example.social.media.platform.Exceptions.PostNotFound;
+import com.example.social.media.platform.Service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,8 +26,12 @@ public class PostController {
             return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
         }
     }
-    public ResponseEntity<Notifications> addLike(@RequestParam Integer postId){
-        Notifications notifications = postService.addLike(postId);
-        return new ResponseEntity<>(notifications, HttpStatus.OK);
+    public ResponseEntity<String> addLike(@RequestParam Integer postId) throws PostNotFound {
+        try{
+            String mess = postService.addLike(postId);
+            return new ResponseEntity<>(mess, HttpStatus.OK);
+        }catch(Exception e){
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
     }
 }

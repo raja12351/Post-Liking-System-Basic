@@ -1,7 +1,7 @@
-package Controllers;
+package com.example.social.media.platform.Controllers;
 
-import Dtos.RequestDtos.UserDto;
-import Service.UserService;
+import com.example.social.media.platform.Dtos.RequestDtos.UserDto;
+import com.example.social.media.platform.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

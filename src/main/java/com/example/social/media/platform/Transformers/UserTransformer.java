@@ -1,7 +1,7 @@
-package Transformers;
+package com.example.social.media.platform.Transformers;
 
-import Dtos.RequestDtos.UserDto;
-import Models.User;
+import com.example.social.media.platform.Dtos.RequestDtos.UserDto;
+import com.example.social.media.platform.Models.User;
 
 public class UserTransformer {
 

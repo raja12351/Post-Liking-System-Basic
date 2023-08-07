@@ -1,4 +1,4 @@
-package Dtos.RequestDtos;
+package com.example.social.media.platform.Dtos.RequestDtos;
 
 import lombok.Data;
 

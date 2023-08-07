@@ -1,4 +1,4 @@
-package Models;
+package com.example.social.media.platform.Models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -24,9 +24,11 @@ public class User {
 
     private Integer age;
 
+    private String mail;
+
+    private List<String> notifications;
+
     @OneToMany(mappedBy = "user" ,cascade = CascadeType.ALL)
     private List<Post> postList;
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-    private List<Notifications> notificationsList;
 }

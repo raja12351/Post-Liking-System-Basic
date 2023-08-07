@@ -68,7 +68,8 @@ public class PostService {
 
        SimpleMailMessage mailMessage = new SimpleMailMessage();
 
-       String body = "Congratulation" + postNow.getUser().getUserName() + ", your post has been liked";
+       String body = "Congratulation" + postNow.getUser().getUserName() + ", your post with id " + postId +
+               " is like at " + postNow.getContentTime();
        mailMessage.setFrom("springtest17@gmail.com");
        mailMessage.setTo(postNow.getUser().getMail());
        mailMessage.setSubject("Your Post has been liked");
